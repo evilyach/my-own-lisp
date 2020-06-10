@@ -4,4 +4,5 @@ all:
 	gcc -std=c99 -Wall \
 		$(wildcard src/*.c) \
 		-I include \
+		-ledit \
 		-o out/my-own-lisp
