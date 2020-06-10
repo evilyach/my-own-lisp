@@ -1,3 +1,8 @@
 all:
-	mkdir out
-	cc -std=c99 -Wall ./src/main.c -o ./out/my-own-lisp
+	[ -d "out" ] || mkdir out
+
+	gcc -std=c99 -Wall \
+		$(wildcard src/*.c) \
+		-I include \
+		-ledit \
+		-o out/my-own-lisp

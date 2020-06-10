@@ -52,4 +52,5 @@ Mkfile.old
 dkms.conf
 
 # Project specific
+.vscode
 out
