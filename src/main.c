@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <editline/readline.h>
 
 #include "config.h"
+#include "edit.h"
 
 int main(int argc, char **argv)
 {
