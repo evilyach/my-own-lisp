@@ -4,6 +4,18 @@ My implementation of Lisp language using "Build Your Own Lisp" book by [Mr Danie
 
 ## Compiling
 
+Beforehand, you need to resolve some dependencies. For Ubuntu and other Debian-based distributions, run
+
+```bash
+sudo apt install libedit-dev
+```
+
+Before compiling, you need to run
+```bash
+make build
+```
+It will download needed libraries.
+
 To compile the interpreter, run
 
 ```bash
