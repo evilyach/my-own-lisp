@@ -10,6 +10,12 @@ Beforehand, you need to resolve some dependencies. For Ubuntu and other Debian-b
 sudo apt install libedit-dev
 ```
 
+Before compiling, you need to run
+```bash
+make build
+```
+It will download needed libraries.
+
 To compile the interpreter, run
 
 ```bash
