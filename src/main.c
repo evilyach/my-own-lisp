@@ -4,6 +4,7 @@
 #include "../lib/mpc.h"
 #include "config.h"
 #include "edit.h"
+#include "evaluation.h"
 #include "parser.h"
 
 int main(int argc, char **argv)
@@ -25,13 +26,15 @@ int main(int argc, char **argv)
         char *input = readline(MOL_PROMPT);
         add_history(input);
 
-        mpc_result_t result;
-        if (mpc_parse("<stdin>", input, lisp, &result)) {
-            mpc_ast_print(result.output);
-            mpc_ast_delete(result.output);
+        mpc_result_t mpc_result;
+        if (mpc_parse("<stdin>", input, lisp, &mpc_result)) {
+            long result = evaluate(mpc_result.output);
+            printf("%li\n", result);
+
+            mpc_ast_delete(mpc_result.output);
         } else {
-            mpc_err_print(result.error);
-            mpc_err_delete(result.error);
+            mpc_err_print(mpc_result.error);
+            mpc_err_delete(mpc_result.error);
         }
 
         free(input);
