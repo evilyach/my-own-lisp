@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "../lib/mpc.h"
 #include "config.h"
 #include "edit.h"
 #include "parser.h"
