@@ -1,4 +1,4 @@
-# 𝖒𝖞 𝖔𝖜𝖓 𝖑𝖎𝖘𝖕
+# My Own Lisp
 
 My implementation of Lisp language using "Build Your Own Lisp" book by [Mr Daniel Holden](http://www.buildyourownlisp.com/) as a reference.
 
